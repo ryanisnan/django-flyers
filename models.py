@@ -46,7 +46,7 @@ Class that represents a for sale flyer
 """
 class ForSaleFlyer(Flyer):
 	type = FORSALE_FLYER_TYPE
-	description = models.TextField(null=True, blank=True)
+	description = models.CharField(max_length=255)
 	currency = models.PositiveSmallIntegerField(choices=CURRENCY_CHOICES, default=DEFAULT_CURRENCY)
 	cost = models.DecimalField(max_digits=7, decimal_places=2)
 	phone = models.CharField(max_length=16)
